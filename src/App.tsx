@@ -1,19 +1,24 @@
-import './App.css';
-import styled from 'styled-components';
+import {Header} from "layaot/header/Header";
+import {Main} from "layaot/section/main/Main";
+import {AboutMe} from "layaot/section/aboutMe/AboutMe";
+import {Skills} from "layaot/section/skills/Skills";
+import {Works} from "layaot/section/works/Works";
+import {Contacts} from "layaot/section/contacts/Contacts";
+import {Footer} from "layaot/footer/Footer";
 
 
 function App() {
     return (
-        <div className="App">
-            <Title>Welcome to IT-INCUBATOR</Title>
+        <div>
+            <Header/>
+            <Main/>
+            <AboutMe/>
+            <Skills/>
+            <Works/>
+            <Contacts/>
+            <Footer/>
         </div>
     );
 }
 
 export default App;
-
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
-`;
