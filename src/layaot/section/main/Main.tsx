@@ -4,6 +4,7 @@ import mayPhoto from "assets/images/photo_2023-10-16-15.23.22-_1_ (1).png"
 import {FlexWrapper} from "components/FlexWrapper";
 import {Theme} from "styles/Theme";
 import {Container} from "components/container/Container";
+import {Button} from "components/Button";
 
 export const Main = () => {
 
@@ -17,7 +18,7 @@ export const Main = () => {
                        <MainText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
                            sunt.</MainText>
-                       <MainButton>Contact Me</MainButton>
+                       <Button>Contact Me</Button>
                    </div>
 
                    <MainImage src={mayPhoto} alt=""/>
@@ -50,7 +51,4 @@ const Name =styled.h2`
 const MainText =styled.p`
 `
 
-const MainButton = styled.button`
-  border-radius: 6px;
-  background:${Theme.colors.accent}
-`
+
