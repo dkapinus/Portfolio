@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "components/icon/Icon";
 import {FlexWrapper} from "components/FlexWrapper";
+import {Theme} from "styles/Theme";
 
 export const Footer = () => {
     return (
@@ -10,17 +11,17 @@ export const Footer = () => {
                 <IconWrapper>
                     <SocialItem>
                         <IconLink>
-                            <Icon iconId={"iconGmail"} width={"39"} height={"38"} viewBox={"0 0 39 38"}/>
+                            <Icon iconId={"iconGmail"} width={"46"} height={"60"} viewBox={"0 0 46 60"}/>
                         </IconLink>
                     </SocialItem>
                     <SocialItem>
                         <IconLink>
-                            <Icon iconId={"iconLinkedin"} width={"39"} height={"38"} viewBox={"0 0 39 38"}/>
+                            <Icon iconId={"iconLinkedin"} width={"70"} height={"60"} viewBox={"0 0 70 60"}/>
                         </IconLink>
                     </SocialItem>
                     <SocialItem>
                         <IconLink>
-                            <Icon iconId={"iconGit"} width={"39"} height={"38"} viewBox={"0 0 39 38"}/>
+                            <Icon iconId={"iconGit"} width={"56"} height={"60"} viewBox={"0 0 56 60"}/>
                         </IconLink>
                     </SocialItem>
 
@@ -32,8 +33,8 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: #041F31;
-  min-height: 50vh;
+  background-color: ${Theme.colors.primary};
+
 
 `
 
@@ -47,9 +48,22 @@ const SocialItem = styled.li`
 
 `
 const IconLink = styled.a`
+  color: #00F5A0;
 
+  &:hover {
+    color: #00D9F5;
+    
+    svg  {
+      transform: translateY(-4px);
+    }
+  }
 `
 
 const Copyright = styled.small`
   opacity: 0.5;
+  color: ${Theme.colors.font};
+  font-size: 14px;
+  font-weight: 400;
+  margin: 40px 0;
+
 `

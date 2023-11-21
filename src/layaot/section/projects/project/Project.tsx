@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Theme} from "styles/Theme";
 
 
 type WorkPropsType = {
@@ -11,7 +12,6 @@ type WorkPropsType = {
 export const Project:React.FC<WorkPropsType> = ({title,text,img,...props}) => {
     return (
         <StyledWork>
-            <Container>
                 <Image src={img} alt=""/>
                 <Title>{title}</Title>
                 <WrapSteak>
@@ -22,58 +22,61 @@ export const Project:React.FC<WorkPropsType> = ({title,text,img,...props}) => {
                 <Text>
                     {text}
                 </Text>
-            </Container>
+
 
         </StyledWork>
     );
 };
 
 const StyledWork = styled.div`
-
-`
-
-const Container = styled.div`
   width: 522px;
   height: 636px;
   border-radius: 6px;
   background-color: #222525;
-  
 `
+
+
 
 const Image = styled.img`
   width: 522px;
-  height: 388px;
   object-fit: cover;
 `
 
 const Title = styled.h3`
+  color: ${Theme.colors.font};
+  font-size: 20px;
+  font-weight: 600;
+  padding:25px  10px 11px 26px ;
+  text-transform: uppercase;
+  
 
 `
 
 const Text = styled.p`
+  color: ${Theme.colors.font};
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; 
+  letter-spacing: 0.64px;
+  padding:20px 10px 31px 26px ;
 
 `
 
 const WrapSteak =styled.div`
-  padding: 8px 16px;
-  display: flex;
-  justify-content: start;
+  justify-content: center;
+  display: inline-flex;
   align-items: center;
+  padding: 0 26px;
   gap: 10px;
 `
 
-const SteakButton =styled.button`
+const SteakButton =styled.span`
+  padding: 8px 16px;
   border-radius: 4px;
-  background: var(--gradient, linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%));
-
-
+  background:${Theme.colors.accent};
   color: var(--title, #1F2626);
   text-align: center;
-  font-family: Montserrat;
   font-size: 10px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 140% */
-  letter-spacing: 1.2px;
   text-transform: uppercase;
 `
