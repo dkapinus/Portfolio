@@ -33,5 +33,6 @@ export const GlobalStyles =createGlobalStyle`
  }
  section {
    background-color: ${Theme.colors.primary}; 
+   padding: 100px 0;
  }
 `

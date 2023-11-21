@@ -47,7 +47,7 @@ module.exports = function (proxy, allowedHost) {
       // in addition to all the virtual build products that it serves from memory.
       // This is confusing because those files won’t automatically be available in
       // production build folder unless we copy them. However, copying the whole
-      // project directory is dangerous because we may expose sensitive files.
+      // projects directory is dangerous because we may expose sensitive files.
       // Instead, we establish a convention that only files in `public` directory
       // get served. Our build script will copy `public` into the `build` folder.
       // In `index.html`, you can get URL of `public` folder with %PUBLIC_URL%:

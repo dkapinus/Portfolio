@@ -117,7 +117,7 @@ module.exports = function (webpackEnv) {
         loader: require.resolve("postcss-loader"),
         options: {
           postcssOptions: {
-            // Necessary for external CSS imports to work
+            // Necessary for external CSS imports to project
             // https://github.com/facebook/create-react-app/issues/2677
             ident: "postcss",
             config: false,
@@ -206,7 +206,7 @@ module.exports = function (webpackEnv) {
       assetModuleFilename: "static/media/[name].[hash][ext]",
       // webpack uses `publicPath` to determine where the app is being served from.
       // It requires a trailing slash, or the file assets will get an incorrect path.
-      // We inferred the "public path" (such as / or /my-project) from homepage.
+      // We inferred the "public path" (such as / or /my-projects) from homepage.
       publicPath: paths.publicUrlOrPath,
       // Point sourcemap entries to original disk location (format as URL on Windows)
       devtoolModuleFilenameTemplate: isEnvProduction
@@ -343,7 +343,7 @@ module.exports = function (webpackEnv) {
                 },
               },
             },
-            // "url" loader works like "file" loader except that it embeds assets
+            // "url" loader projects like "file" loader except that it embeds assets
             // smaller than specified limit in bytes as data URLs to avoid requests.
             // A missing `test` is equivalent to a match.
             {
@@ -578,7 +578,7 @@ module.exports = function (webpackEnv) {
         new ReactRefreshWebpackPlugin({
           overlay: false,
         }),
-      // Watcher doesn't work well if you mistype casing in a path so we use
+      // Watcher doesn't project well if you mistype casing in a path so we use
       // a plugin that prints an error when you attempt to do this.
       // See https://github.com/facebook/create-react-app/issues/240
       isEnvDevelopment && new CaseSensitivePathsPlugin(),

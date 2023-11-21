@@ -7,7 +7,7 @@ import {Container} from "components/container/Container";
 
 
 
-const SkillsMap =["html","css","js","ts", "redux","styledComponent","react","git"]
+const SkillsMap =["html","css","JAVACRIPT","typescript", "redux","styled Component","react","git"]
 
 export  const Skills = () => {
 
@@ -18,12 +18,12 @@ export  const Skills = () => {
                <TitleSection>
                    Skills
                </TitleSection>
-               <FlexWrapper wrap={"wrap"} justify={"space-around"} align={"center"}>
+               <FlexWrapper wrap={"wrap"} justify={"space-between"} >
                    {SkillsMap.map((el,index)=>{
                        return (
-                           <div key={index}>
+                           <SkillWrapper key={index}>
                                <Skill  iconId={el} />
-                           </div>
+                           </SkillWrapper>
                        )
                    })}
                </FlexWrapper>
@@ -33,6 +33,11 @@ export  const Skills = () => {
 };
 
 const StyledSkills =styled.section`
- 
-  min-height: 100vh;
+  display: flex;
+`
+
+const SkillWrapper=styled.div`
+  
+ margin: 60px;
+
 `

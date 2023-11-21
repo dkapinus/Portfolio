@@ -30,7 +30,6 @@ export const AboutMe = () => {
 
 
 const StyledAboutMe = styled.section`
-  min-height: 50vh;
   display: flex;
   align-content: flex-start;
 

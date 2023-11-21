@@ -8,7 +8,7 @@ type WorkPropsType = {
     img:string
 }
 
-export const Work:React.FC<WorkPropsType> = ({title,text,img,...props}) => {
+export const Project:React.FC<WorkPropsType> = ({title,text,img,...props}) => {
     return (
         <StyledWork>
             <Container>
