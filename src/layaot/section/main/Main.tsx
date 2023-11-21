@@ -5,6 +5,7 @@ import {FlexWrapper} from "components/FlexWrapper";
 import {Container} from "components/container/Container";
 import {Button} from "components/Button";
 import {Theme} from "styles/Theme";
+import {Icon} from "components/icon/Icon";
 
 export const Main = () => {
 
