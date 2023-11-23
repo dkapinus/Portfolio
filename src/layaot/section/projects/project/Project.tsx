@@ -40,6 +40,10 @@ const StyledWork = styled.div`
 const Image = styled.img`
   width: 522px;
   object-fit: cover;
+  
+  @media ${Theme.media.mobile}{
+    width: 350px;
+  }
 `
 
 const Title = styled.h3`
@@ -70,7 +74,7 @@ const WrapSteak =styled.div`
   gap: 10px;
 `
 
-const SteakButton =styled.span`
+const SteakButton = styled.span`
   padding: 8px 16px;
   border-radius: 4px;
   background:${Theme.colors.accent};

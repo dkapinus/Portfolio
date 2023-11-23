@@ -95,4 +95,8 @@ const Button = styled.button`
     font-size: 16px;
     font-weight: 500;
   }
+  
+  @media ${Theme.media.mobile} {
+    width: 332px;
+  }
 `

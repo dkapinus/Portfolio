@@ -5,7 +5,7 @@ export const GlobalStyles =createGlobalStyle`
 
   *,
   *::before,
-  *::after{
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +19,9 @@ export const GlobalStyles =createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: ${Theme.colors.font};
+   
+    
+    
   }
 
  a {
@@ -35,5 +38,9 @@ export const GlobalStyles =createGlobalStyle`
  section {
    background-color: ${Theme.colors.primary}; 
    padding: 100px 0;
+   
+   @media ${Theme.media.mobile} {
+     padding: 50px 0;
+   }
  }
 `

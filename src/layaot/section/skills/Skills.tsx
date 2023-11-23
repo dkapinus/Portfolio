@@ -4,10 +4,20 @@ import {Skill} from "layaot/section/skills/skill/Skill";
 import {TitleSection} from "components/TitleSection";
 import {FlexWrapper} from "components/FlexWrapper";
 import {Container} from "components/container/Container";
+import {Theme} from "styles/Theme";
 
 
 
-const SkillsMap =["html","css","JAVACRIPT","typescript", "redux","styled Component","react","git"]
+const SkillsMap =[ {id:"html", title:"html"},
+    {id:"css", title:"css"},
+    {id:"JAVACRIPT", title:"JAVACRIPT"},
+    {id:"typescript", title:"typescript"},
+    {id:"redux", title:"redux"},
+    {id:"styled Component", title:"styled Component"},
+    {id:"react", title:"react"},
+    {id:"git", title:"git"}]
+
+
 
 export  const Skills = () => {
 
@@ -18,11 +28,11 @@ export  const Skills = () => {
                <TitleSection>
                    Skills
                </TitleSection>
-               <FlexWrapper wrap={"wrap"} justify={"space-between"} >
+               <FlexWrapper  justify={"space-between"} wrap={"wrap"} >
                    {SkillsMap.map((el,index)=>{
                        return (
                            <SkillWrapper key={index}>
-                               <Skill  iconId={el} />
+                               <Skill  Element={el} />
                            </SkillWrapper>
                        )
                    })}
@@ -34,10 +44,20 @@ export  const Skills = () => {
 
 const StyledSkills =styled.section`
   display: flex;
+  
+  
 `
 
 const SkillWrapper=styled.div`
   
- margin: 60px;
+  flex: 1 1 23%;
+  display: flex;
+  justify-content: center;
+  
+
+  @media ${Theme.media.mobile} {
+ 
+    flex: 1 1 32%
+  }
 
 `

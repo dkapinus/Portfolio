@@ -6,17 +6,22 @@ import {FlexWrapper} from "components/FlexWrapper";
 
 
 type SkillsPropsType = {
-    iconId: string
+    Element:ElementPropsType
+}
+
+type ElementPropsType  = {
+    id:string;
+    title:string
 }
 
 
-export const Skill: React.FC<SkillsPropsType> = ({iconId, ...props}) => {
+export const Skill: React.FC<SkillsPropsType> = ({Element, ...props}) => {
 
     return (
         <SkillStyled>
-            <FlexWrapper direction={"column"} align={"center"}>
-                <Icon iconId={iconId} width={"120"} height={"120"}/>
-                <TitleSkills>{iconId}</TitleSkills>
+            <FlexWrapper direction={"column"} align={"center"}  >
+                <Icon iconId={Element.id} width={"120"} height={"120"}/>
+                <TitleSkills>{Element.title}</TitleSkills>
             </FlexWrapper>
 
         </SkillStyled>
@@ -24,15 +29,36 @@ export const Skill: React.FC<SkillsPropsType> = ({iconId, ...props}) => {
 };
 
 const SkillStyled = styled.div`
+  display: inline-block;
+  padding: 10px;
 
+    svg {
+      @media ${Theme.media.mobile} {
+        text-align: center;
+        margin:0;
+        padding:0;
+        width:88px;
+        height:88px;
+       
+        
+      }
+    }
 `
 
 const TitleSkills = styled.div`
 
   color: ${Theme.colors.font};
-  text-align: center;
+  //text-align: start;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  margin-top: 20px;
+  width: 140px;
+  text-align: center;
+ 
+
+  @media ${Theme.media.mobile} {
+
+    margin-top:0;
+   
+  }
 `

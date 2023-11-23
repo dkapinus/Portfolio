@@ -44,6 +44,7 @@ const TextSection = styled.p`
   font-size: 18px;
   font-weight: 400;
   line-height: 26px; /* 144.444% */
+  letter-spacing: 0.72px;
   margin: 20px 0;
 
 
