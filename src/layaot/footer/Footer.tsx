@@ -65,5 +65,5 @@ const Copyright = styled.small`
   font-size: 14px;
   font-weight: 400;
   margin: 40px 0;
-
+  text-align: center;
 `

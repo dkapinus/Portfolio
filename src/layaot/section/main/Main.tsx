@@ -12,7 +12,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"} >
+                <FlexWrapper align={"center"} justify={"space-between"}>
                     <WrapperText>
                         <MainTitle>WEB DEVELOPER</MainTitle>
                         <Name>Kapinus Dima</Name>
@@ -31,56 +31,64 @@ export const Main = () => {
 
 
 const StyledMain = styled.section`
-  min-height: 100vh;
-  display: flex;
 
-  div {
+  display: flex;
+  
+
+  ${FlexWrapper}{
+    gap:20px;
     @media ${Theme.media.mobile} {
       flex-direction: column-reverse;
       align-items: center;
-    
+
     }
   }
 
- 
+
 `
 
 const MainImage = styled.img`
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 430px;
   object-fit: cover;
-  
-  @media ${Theme.media.mobile} {
-  width: 280px;
-  height: 344px;
-    
+
+  @media ${Theme.media.tablet} {
+    max-width: 280px;
+    width: 100%;
+    height: 344px;
+    padding:50px 0 20px 0;
+   
+
   }
 `
 
 const MainTitle = styled.h1`
+  padding: 10px 0;
   color: #D7E5EC;
   font-family: Tinos, sans-serif;
   font-size: 20px;
   font-weight: 400;
 
-  @media ${Theme.media.mobile} {
+  @media ${Theme.media.tablet} {
     font-size: 16px;
     text-align: center;
   }
-  
+
 `
 
 const Name = styled.h2`
+ 
   font-size: 72px;
   font-weight: 600;
   background: var(--gradient, linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  @media ${Theme.media.mobile} {
+  @media ${Theme.media.tablet} {
     font-size: 36px;
     text-align: center;
-   
+
   }
 
 `
@@ -91,24 +99,14 @@ const MainText = styled.p`
   font-size: 16px;
   font-weight: 400;
   margin: 20px 0;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+`
 
+const WrapperText = styled.div`
 
   @media ${Theme.media.mobile} {
     text-align: center;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.64px;
-  }
-
- 
- 
- 
-  
-`
-
-const WrapperText =styled.div`
-
-  @media ${Theme.media.mobile} {
-   text-align: center;
   }
 `
 

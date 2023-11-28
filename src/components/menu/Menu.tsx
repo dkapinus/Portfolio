@@ -33,13 +33,6 @@ export default Menu;
 const StyledMenu = styled.nav`
 width: 100%;
   
-
-
-
- 
-
-
-
 `
 
 const ListItem = styled.li`
@@ -54,13 +47,6 @@ const LinkItem = styled.a`
   color: ${Theme.colors.font};
   font-size: 16px;
   font-weight: 500;
-  
-
-
-
-  //&:hover {
-  //  setIsClick(false)
-  //}
  `
 const StyledUl = styled.ul`
 

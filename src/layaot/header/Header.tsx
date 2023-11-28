@@ -4,7 +4,7 @@ import {Logo} from "components/logo/Logo";
 import Menu from "components/menu/Menu";
 import {Container} from "components/container/Container";
 import {FlexWrapper} from "components/FlexWrapper";
-import {Theme} from "styles/Theme";
+
 
 
 
@@ -25,8 +25,8 @@ export const Header = () => {
 
 
 const StyledHeader = styled.header`
-  background: ${Theme.colors.primary};
-  padding: 20px  0;
+  background: rgba(4, 31, 49,0.9);
+  padding: 10px  0;
   position: fixed;
   top: 0;
   left: 0;
