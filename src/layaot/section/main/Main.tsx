@@ -6,6 +6,7 @@ import {Container} from "components/container/Container";
 import {Button} from "components/Button";
 import {Theme} from "styles/Theme";
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 
 export const Main = () => {
@@ -31,8 +32,9 @@ export const Main = () => {
                             sunt.</MainText>
                         <Button>Contact Me</Button>
                     </WrapperText>
-
+                <Tilt>
                     <MainImage src={myPhoto} alt="myPhoto"/>
+            </Tilt>
                 </FlexWrapper>
             </Container>
         </StyledMain>
