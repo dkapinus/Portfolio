@@ -5,6 +5,7 @@ import {FlexWrapper} from "components/FlexWrapper";
 import {Container} from "components/container/Container";
 import {Button} from "components/Button";
 import {Theme} from "styles/Theme";
+import Typewriter from 'typewriter-effect';
 
 
 export const Main = () => {
@@ -14,8 +15,17 @@ export const Main = () => {
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <WrapperText>
-                        <MainTitle>WEB DEVELOPER</MainTitle>
-                        <Name>Kapinus Dima</Name>
+                        <MainTitle>
+                            <p>WEB DEVELOPER</p>
+                            <Typewriter
+                                options={{
+                                    strings: ['WEB DEVELOPER'],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </MainTitle>
+                        <Name>Kapinus Dzmitry</Name>
                         <MainText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                             Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
                             sunt.</MainText>
@@ -69,6 +79,10 @@ const MainTitle = styled.h1`
   font-family: Tinos, sans-serif;
   font-size: 20px;
   font-weight: 400;
+  
+  p {
+    display: none;
+  }
 
   @media ${Theme.media.tablet} {
     font-size: 16px;

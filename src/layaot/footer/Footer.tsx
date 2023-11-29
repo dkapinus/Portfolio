@@ -26,7 +26,7 @@ export const Footer = () => {
                     </SocialItem>
 
                 </IconWrapper>
-                <Copyright>© 2024 Kapinus Dima, All Rights Reserved.</Copyright>
+                <Copyright>© 2024 Kapinus Dzmitry, All Rights Reserved.</Copyright>
             </FlexWrapper>
         </StyledFooter>
     );
