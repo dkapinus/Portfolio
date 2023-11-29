@@ -33,6 +33,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
+  position: relative;
   background-color: ${Theme.colors.primary};
 
 

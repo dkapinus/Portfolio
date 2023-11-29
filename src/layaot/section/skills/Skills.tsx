@@ -43,7 +43,9 @@ export  const Skills = () => {
 };
 
 const StyledSkills =styled.section`
+  position: relative;
   display: flex;
+  
   
   
 `

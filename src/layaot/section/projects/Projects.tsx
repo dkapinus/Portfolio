@@ -49,6 +49,7 @@ export const Projects = () => {
 
 
 const StyledWork = styled.section`
+  position: relative;
   display: flex;
   
   ${FlexWrapper} {

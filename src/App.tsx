@@ -5,11 +5,13 @@ import {Skills} from "layaot/section/skills/Skills";
 import {Projects} from "layaot/section/projects/Projects";
 import {Contacts} from "layaot/section/contacts/Contacts";
 import {Footer} from "layaot/footer/Footer";
+import {Particle} from "components/particls/Particle";
 
 
 function App() {
     return (
         <div>
+            <Particle/>
             <Header/>
             <Main/>
             <AboutMe/>

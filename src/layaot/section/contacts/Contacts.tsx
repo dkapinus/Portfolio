@@ -29,7 +29,7 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
 
-
+position: relative;
 
 `
 
