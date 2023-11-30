@@ -12,7 +12,7 @@ import Tilt from 'react-parallax-tilt';
 export const Main = () => {
 
     return (
-        <StyledMain>
+        <StyledMain id={"home"}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <WrapperText>
@@ -30,7 +30,10 @@ export const Main = () => {
                         <MainText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                             Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
                             sunt.</MainText>
-                        <Button>Contact Me</Button>
+                        <Button to={"contact"}
+                                spy={true}
+                                smooth={true}
+                        >Contact Me</Button>
                     </WrapperText>
                 <Tilt>
                     <MainImage src={myPhoto} alt="myPhoto"/>

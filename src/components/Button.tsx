@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import {Theme} from "styles/Theme";
+import {Link} from "react-scroll";
 
-export const Button = styled.button`
+export const Button = styled(Link)`
 
   color: #252728;
 

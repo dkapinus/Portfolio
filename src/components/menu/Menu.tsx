@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
+import React  from 'react';
 import styled from "styled-components";
 import {Theme} from "styles/Theme";
-import {Button} from "components/Button";
+import {Link} from "react-scroll";
 
 
-const DataHeaderMenu = ["Home", "Projects", "Contact"]
+const DataHeaderMenu = [{title: "Home", href: "home"},
+    {title: "Projects", href: "projects"},
+    {title: "Contact", href: "contact"}]
 
 
 const Menu = () => {
-    const [isClick,setIsClick] =useState<boolean>(true)
+
     return (
         <StyledMenu>
             <StyledUl>
@@ -16,9 +18,14 @@ const Menu = () => {
                 {DataHeaderMenu.map((el, index) => {
                     return (
                         <ListItem key={index}>
-                            {isClick ? <LinkItem href="">{el}</LinkItem>
-                              :  <Button><LinkItem href="">{el}</LinkItem></Button>}
-
+                            <LinkItem
+                                activeClass="active"
+                                to={el.href}
+                                spy={true}
+                                smooth={true}
+                            >
+                                {el.title}
+                            </LinkItem>
                         </ListItem>
                     )
                 })}
@@ -31,31 +38,50 @@ const Menu = () => {
 export default Menu;
 
 const StyledMenu = styled.nav`
-width: 100%;
-  
+  width: 100%;
+
 `
 
 const ListItem = styled.li`
-    
+ 
 
 `
 
 
+const LinkItem = styled(Link)`
 
-const LinkItem = styled.a`
- 
   color: ${Theme.colors.font};
   font-size: 16px;
   font-weight: 500;
- `
+
+  position: relative;
+
+  &:hover, &.active {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 5px;
+      position: absolute;
+      background: ${Theme.colors.accent};
+      bottom: -5px;
+      z-index: -1;
+    }
+  }
+
+ 
+ 
+  
+
+`
 const StyledUl = styled.ul`
 
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 
-    & > li:first-child  {
-      margin-right: auto;
-     
-    }
-  
+  & > li:first-child {
+    margin-right: auto;
+
+  }
+
 `

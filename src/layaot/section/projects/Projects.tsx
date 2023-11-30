@@ -24,10 +24,10 @@ export const Projects = () => {
     const displayedProjects = width <= breakpoint ? ProjectData.slice(0, Math.ceil(ProjectData.length / 2)) : ProjectData;
 
     return (
-        <StyledWork>
+        <StyledWork id={"projects"}>
             <Container>
                 <TitleSection>
-                    Works
+                    Projects
                 </TitleSection>
                 <FlexWrapper wrap={"wrap"} justify={"space-around"} align={"center"}>
 
@@ -38,9 +38,9 @@ export const Projects = () => {
                                          "                    Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet"}/>
                         )
                     })}
-
+                  {width <= breakpoint ? <ButtonProject><span>SEE ALL PROJECTS</span></ButtonProject> : ""}
                 </FlexWrapper>
-                {width <= breakpoint ? <ButtonProject><span>SEE ALL PROJECTS</span></ButtonProject> : ""}
+
             </Container>
 
         </StyledWork>
@@ -53,15 +53,17 @@ const StyledWork = styled.section`
   display: flex;
   
   ${FlexWrapper} {
-    gap:20px;
-    
-    @media ${Theme.media.mobile} {
-      gap:0
+    gap: 20px;
+
+  
+
+    @media ${Theme.media.bigTablet} {
+      justify-content: center;
+      flex-direction:column;
+      align-items: center;
     }
   }
-  
-  
-  
+
 `;
 
 const ButtonProject = styled.section`
@@ -74,7 +76,7 @@ const ButtonProject = styled.section`
   padding: 12px 20px 13px 20px;
   margin: 0 auto;
   gap: 10px;
-  flex-shrink: 0;
+
 
   border-radius: 6px;
   background: ${Theme.colors.accent};

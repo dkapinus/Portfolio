@@ -9,7 +9,7 @@ export const Contacts = () => {
 
 
     return (
-        <StyledContacts>
+        <StyledContacts id={"contact"}>
             <Container>
                 <TitleSection>
                     Contacts
