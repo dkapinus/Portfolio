@@ -6,6 +6,7 @@ import {Projects} from "layaot/section/projects/Projects";
 import {Contacts} from "layaot/section/contacts/Contacts";
 import {Footer} from "layaot/footer/Footer";
 import {Particle} from "components/particls/Particle";
+import {GoDownBtn} from "components/goTopBtn/GoTopBtn";
 
 
 function App() {
@@ -14,11 +15,13 @@ function App() {
             <Particle/>
             <Header/>
             <Main/>
+            <GoDownBtn/>
             <AboutMe/>
             <Skills/>
             <Projects/>
             <Contacts/>
             <Footer/>
+
         </div>
     );
 }
