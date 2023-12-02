@@ -49,23 +49,36 @@ const ListItem = styled.li`
 
 
 const LinkItem = styled(Link)`
-
+  position: relative;
+  
   color: ${Theme.colors.font};
   font-size: 16px;
   font-weight: 500;
 
-  position: relative;
+
+
+
+  &::before {
+    position: absolute;
+    
+    content: '';
+    display: none;
+    width: 100%;
+    height: 5px;
+    background: ${Theme.colors.accent};
+    bottom: -5px;
+    z-index: -1;
+    transform: scale(0);
+    transition: ${Theme.animation.transition};
+    
+    
+  }
 
   &:hover, &.active {
+
     &::before {
-      content: '';
       display: inline-block;
-      width: 100%;
-      height: 5px;
-      position: absolute;
-      background: ${Theme.colors.accent};
-      bottom: -5px;
-      z-index: -1;
+      transform: scale(1);
     }
   }
 

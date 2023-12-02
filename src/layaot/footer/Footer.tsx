@@ -51,6 +51,10 @@ const SocialItem = styled.li`
 const IconLink = styled.a`
   color: #00F5A0;
 
+  transition: ${Theme.animation.transition};
+
+  
+
   &:hover {
     color: #00D9F5;
     

@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {Theme} from "styles/Theme";
-import {Link} from "react-scroll";
 
-export const Button = styled(Link)`
 
+export const Button = styled.button`
   color: #252728;
-
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -17,7 +15,14 @@ export const Button = styled(Link)`
   padding: 12px 20px 13px 20px;
   gap: 10px;
 
-  :hover {
-    cursor: pointer;
+  transition: ${Theme.animation.transition};
+
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
   }
+  
+
 `

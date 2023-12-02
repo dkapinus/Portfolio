@@ -7,7 +7,7 @@ import {Button} from "components/Button";
 import {Theme} from "styles/Theme";
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
-
+import {Link} from "react-scroll";
 
 export const Main = () => {
 
@@ -30,14 +30,21 @@ export const Main = () => {
                         <MainText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                             Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
                             sunt.</MainText>
-                        <Button to={"contact"}
-                                spy={true}
-                                smooth={true}
-                        >Contact Me</Button>
+
+                        <Link to={"contact"}
+                              spy={true}
+                              smooth={true}
+                              width={100}
+                        ><Button>
+                            Contact Me
+                        </Button>
+                        </Link>
+
+
                     </WrapperText>
-                <Tilt>
-                    <MainImage src={myPhoto} alt="myPhoto"/>
-            </Tilt>
+                    <Tilt>
+                        <MainImage src={myPhoto} alt="myPhoto"/>
+                    </Tilt>
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -48,10 +55,10 @@ export const Main = () => {
 const StyledMain = styled.section`
 
   display: flex;
-  
 
-  ${FlexWrapper}{
-    gap:20px;
+
+  ${FlexWrapper} {
+    gap: 20px;
     @media ${Theme.media.mobile} {
       flex-direction: column-reverse;
       align-items: center;
@@ -72,8 +79,8 @@ const MainImage = styled.img`
     max-width: 280px;
     width: 100%;
     height: 344px;
-    padding:50px 0 20px 0;
-   
+    padding: 50px 0 20px 0;
+
 
   }
 `
@@ -84,7 +91,7 @@ const MainTitle = styled.h1`
   font-family: Tinos, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  
+
   p {
     display: none;
   }
@@ -97,7 +104,7 @@ const MainTitle = styled.h1`
 `
 
 const Name = styled.h2`
- 
+
   font-size: 72px;
   font-weight: 600;
   background: var(--gradient, linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%));

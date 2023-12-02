@@ -76,10 +76,15 @@ const ButtonProject = styled.section`
   padding: 12px 20px 13px 20px;
   margin: 0 auto;
   gap: 10px;
-
-
   border-radius: 6px;
   background: ${Theme.colors.accent};
+
+  transition: .8s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 
   span {
     color: #252728;

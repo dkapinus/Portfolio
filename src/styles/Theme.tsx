@@ -9,5 +9,8 @@ export const Theme  = {
         tablet: " screen and (max-width: 768px)",
         bigTablet: " screen and (max-width: 1093px)",
         desktop: " screen and (min-width: 1140px)",
+    },
+    animation : {
+        transition : ".6s ease-in-out"
     }
 }
