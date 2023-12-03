@@ -6,6 +6,7 @@ import {Project} from "layaot/section/projects/project/Project";
 import imageWorks from "../../../assets/images/image.jpg"
 import {Container} from "components/container/Container";
 import {Theme} from "styles/Theme";
+import {Fade} from "react-awesome-reveal";
 
 
 const ProjectData = ["React", "JS", "HTML", "Redux"]
@@ -30,6 +31,9 @@ export const Projects = () => {
                     Projects
                 </TitleSection>
                 <FlexWrapper wrap={"wrap"} justify={"space-around"} align={"center"}>
+                    <Fade cascade={true}
+                          damping={0.2}
+                    >
 
                     {displayedProjects.map((el, index) => {
                         return (
@@ -38,6 +42,7 @@ export const Projects = () => {
                                          "                    Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet"}/>
                         )
                     })}
+                    </Fade>
                   {width <= breakpoint ? <ButtonProject><span>SEE ALL PROJECTS</span></ButtonProject> : ""}
                 </FlexWrapper>
 

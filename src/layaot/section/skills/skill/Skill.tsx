@@ -30,19 +30,22 @@ export const Skill: React.FC<SkillsPropsType> = ({Element, ...props}) => {
 
 const SkillStyled = styled.div`
   display: inline-block;
-  padding: 10px;
 
-    svg {
-      @media ${Theme.media.mobile} {
-        text-align: center;
-        margin:0;
-        padding:0;
-        width:88px;
-        height:88px;
-       
-        
-      }
+
+  svg {
+    @media ${Theme.media.mobile} {
+      text-align: center;
+      margin:0;
+      padding:0;
+      width:88px;
+      height:88px;
+
+
     }
+  }
+
+
+ 
 `
 
 const TitleSkills = styled.div`
