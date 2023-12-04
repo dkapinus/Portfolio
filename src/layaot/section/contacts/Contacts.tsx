@@ -1,25 +1,42 @@
-import React from 'react';
+import React, {ElementRef, useRef} from 'react';
 import styled from "styled-components";
 import {TitleSection} from "components/TitleSection";
 import {Container} from "components/container/Container";
 import {Theme} from "styles/Theme";
+import emailjs from '@emailjs/browser';
 
 
 export const Contacts = () => {
 
+    const form = useRef<ElementRef<"form">>(null);
 
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        if (!form.current) return
+
+        emailjs.sendForm('service_zqsdsrs', 'template_7mllyzq', form.current, '5_yJl-77G-fRKlCj_')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    };
     return (
         <StyledContacts id={"contact"}>
             <Container>
                 <TitleSection>
                     Contacts
                 </TitleSection>
-                <StyledForms>
+                <StyledForms ref={form} onSubmit={sendEmail}>
 
-                    <Field placeholder={"Name"}/>
-                    <Field placeholder={"Email"}/>
-                    <Field placeholder={"Message"} as={"textarea"}/>
+                    <Field required placeholder={"name"} name={"user_name"}/>
+                    <Field required placeholder={"email"} name={"email"}/>
+                    <Field required placeholder={"subject"} name={"subject"}/>
+                    <Field required placeholder={"message"} name={"message"} as={"textarea"}/>
                     <Button type={"submit"}><span>Submit</span></Button>
+
                 </StyledForms>
             </Container>
 
