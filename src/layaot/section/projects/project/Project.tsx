@@ -5,22 +5,21 @@ import {Theme} from "styles/Theme";
 
 type WorkPropsType = {
     title: string
-    link:string
+    link: string
     text: string
     img: string
     id: number
-    steak:string[]
+    steak: string[]
 }
 
 
-
-export const Project: React.FC<WorkPropsType> = ({title,link, text, img,steak, ...props}) => {
+export const Project: React.FC<WorkPropsType> = ({title, link, text, img, steak, ...props}) => {
     return (
-        <StyledWork >
-            <Image src={img} alt=""/>
-            <Title  href={link}>{title}</Title>
+        <StyledWork>
+            <a href={link}> <Image src={img} alt="img project"/></a>
+            <Title href={link}>{title}</Title>
             <WrapSteak>
-                {steak.map((el,index)=>{
+                {steak.map((el, index) => {
                     return (
                         <SteakButton key={index}>{el}</SteakButton>
                     )
@@ -39,21 +38,18 @@ const StyledWork = styled.div`
 
   max-width: 522px;
   height: 600px;
-  width:100%;
-  
+  width: 100%;
+
   border-radius: 6px;
   background-color: #222525;
-  
-  
 
-  
 
   @media ${Theme.media.mobile} {
     max-width: 350px;
-    width:100%;
+    width: 100%;
   }
 
-  
+
 
 `
 
@@ -61,8 +57,9 @@ const StyledWork = styled.div`
 const Image = styled.img`
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 
-  
+
 
 `
 
@@ -98,7 +95,7 @@ const WrapSteak = styled.div`
 `
 
 const SteakButton = styled.span`
-  
+
   padding: 8px 16px;
   border-radius: 4px;
   background: ${Theme.colors.accent};
