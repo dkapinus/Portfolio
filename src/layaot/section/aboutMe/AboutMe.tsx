@@ -16,11 +16,11 @@ export const AboutMe = () => {
                 </TitleSection>
                 <FlexWrapper align={"flex-start"} wrap={"wrap"}>
                     <TextSection>
-                        The long barrow was built on land previously inhabited in the Mesolithic period.
-                        It consisted of a sub-rectangular earthen tumulus, estimated to have been 15 metres (50 feet) in
-                        length, with a chamber built from sarsen megaliths on its eastern end. Both inhumed and cremated
-                        human remains were placed within this chamber
-                        during the Neolithic period, representing at least nine or ten individuals.
+                        Coached 4 junior designers in ARIA and A11y accessibility standards. This lead to 100% of projects created to be accessible for all disabled users.
+                        Created and oversaw wireframe designs from client requests.
+                        Led transition from firebase to AWS, saving company $3,700+ monthly and increasing load speeds by an average of 38%.
+                        Created documentation to teach new team members company standards and best practices in React.js and Node.js. This shortened learning time by an average of 16 days.
+                        Addressed complex issues with real-time lead prioritization using Websocket connectivity.
                     </TextSection>
                 </FlexWrapper>
             </Container>

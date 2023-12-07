@@ -10,17 +10,17 @@ export const Footer = () => {
             <FlexWrapper direction={"column"} align={"center"}>
                 <IconWrapper>
                     <SocialItem>
-                        <IconLink>
+                        <IconLink href={"https://mail.google.com/mail/u/0/#inbox"}>
                             <Icon iconId={"iconGmail"} width={"46"} height={"60"} viewBox={"0 0 46 60"}/>
                         </IconLink>
                     </SocialItem>
                     <SocialItem>
-                        <IconLink>
+                        <IconLink href={"https://www.linkedin.com/in/dmitry-kapinus-776298249/"}>
                             <Icon iconId={"iconLinkedin"} width={"70"} height={"60"} viewBox={"0 0 70 60"}/>
                         </IconLink>
                     </SocialItem>
                     <SocialItem>
-                        <IconLink>
+                        <IconLink href={"https://github.com/dkapinus"}>
                             <Icon iconId={"iconGit"} width={"56"} height={"60"} viewBox={"0 0 56 60"}/>
                         </IconLink>
                     </SocialItem>

@@ -5,20 +5,26 @@ import {Theme} from "styles/Theme";
 
 type WorkPropsType = {
     title: string
+    link:string
     text: string
     img: string
     id: number
+    steak:string[]
 }
 
-export const Project: React.FC<WorkPropsType> = ({title, text, img, ...props}) => {
+
+
+export const Project: React.FC<WorkPropsType> = ({title,link, text, img,steak, ...props}) => {
     return (
-        <StyledWork>
+        <StyledWork >
             <Image src={img} alt=""/>
-            <Title>{title}</Title>
+            <Title  href={link}>{title}</Title>
             <WrapSteak>
-                <SteakButton>Javascript</SteakButton>
-                <SteakButton>React</SteakButton>
-                <SteakButton>Redux</SteakButton>
+                {steak.map((el,index)=>{
+                    return (
+                        <SteakButton key={index}>{el}</SteakButton>
+                    )
+                })}
             </WrapSteak>
             <Text>
                 {text}
@@ -32,9 +38,13 @@ export const Project: React.FC<WorkPropsType> = ({title, text, img, ...props}) =
 const StyledWork = styled.div`
 
   max-width: 522px;
+  height: 600px;
   width:100%;
+  
   border-radius: 6px;
   background-color: #222525;
+  
+  
 
   
 
@@ -51,16 +61,19 @@ const StyledWork = styled.div`
 const Image = styled.img`
   width: 100%;
   object-fit: cover;
+
   
 
 `
 
-const Title = styled.h3`
+const Title = styled.a`
+  display: block;
   color: ${Theme.colors.font};
   font-size: 20px;
   font-weight: 600;
   padding: 25px 10px 11px 26px;
   text-transform: uppercase;
+  cursor: pointer;
 
 
 `

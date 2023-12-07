@@ -9,7 +9,24 @@ import {Theme} from "styles/Theme";
 import {Fade} from "react-awesome-reveal";
 
 
-const ProjectData = ["React", "JS", "HTML", "Redux"]
+
+
+const ProjectData = [
+    {title: "Portfolio 2", link: "https://dkapinus.github.io/CopySvetaPortfolio/",
+        text:"Other educational portfolios are also presented for your attention.",
+    steak:["react","styled component","javascript", "typescript"]},
+    {title:"todolist", link: "https://dkapinus.github.io/todolist/", text: "The main project on which all important skills were practiced (application architecture," +
+            " functionality, working with backend requests) and libraries.",
+        steak:["react","javascript", "typescript","redux","thunk"]},
+    {title:"social media",link:"https://dkapinus.github.io/samurai-way/", text: "The main project on which all important skills were practiced (application architecture," +
+            " functionality, working with backend requests) and libraries.",
+        steak:["react","javascript", "typescript","redux","thunk"]},
+    { title:"counter",link:"https://dkapinus.github.io/Clicker/", text: "Small educational project",
+        steak:["react","javascript", "typescript"]},
+
+
+]
+
 
 export const Projects = () => {
 
@@ -24,6 +41,10 @@ export const Projects = () => {
 
     const displayedProjects = width <= breakpoint ? ProjectData.slice(0, Math.ceil(ProjectData.length / 2)) : ProjectData;
 
+    const onClickHandlerButton =()=> {
+        setWidth(1200)
+    }
+
     return (
         <StyledWork id={"projects"}>
             <Container>
@@ -37,13 +58,17 @@ export const Projects = () => {
 
                     {displayedProjects.map((el, index) => {
                         return (
-                            <Project key={index} id={index} img={imageWorks} title={el}
-                                     text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint." +
-                                         "                    Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet"}/>
+                            <Project key={index} id={index}
+                                     img={imageWorks}
+                                     title={el.title}
+                                     link={el.link}
+                                     text={el.text}
+                                     steak={el.steak}
+                            />
                         )
                     })}
                     </Fade>
-                  {width <= breakpoint ? <ButtonProject><span>SEE ALL PROJECTS</span></ButtonProject> : ""}
+                  {width <= breakpoint ? <ButtonProject onClick={onClickHandlerButton}><span>SEE ALL PROJECTS</span></ButtonProject> : ""}
                 </FlexWrapper>
 
             </Container>
@@ -79,7 +104,6 @@ const ButtonProject = styled.section`
   width: 100%;
   height: 56px;
   padding: 12px 20px 13px 20px;
-  margin: 0 auto;
   gap: 10px;
   border-radius: 6px;
   background: ${Theme.colors.accent};

@@ -27,9 +27,10 @@ export const Main = () => {
                             />
                         </MainTitle>
                         <Name>Kapinus Dzmitry</Name>
-                        <MainText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
-                            sunt.</MainText>
+                        <MainText>Developer engineer with a proven ability to adapt in both self-starting and collaborative
+                            environments while staying focused on achieving high-quality results under strict deadlines.
+                            Eager to obtain a challenging position at a prestigious company  that will expand my learning and
+                            build upon my developer skills.</MainText>
 
                         <Link to={"contact"}
                               spy={true}
